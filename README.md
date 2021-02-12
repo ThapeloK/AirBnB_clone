@@ -56,7 +56,7 @@ What you should learn from this project:
 
 The first piece is to manipulate a powerful storage system. This storage engine will give us an abstraction between objects and How they are stored and persisted. 
 
-![Image of hbnb](https://github.com/ThapeloK/AirBnB_clone/blob/master/console.png)
+![Image of hbnb](https://github.com/ThapeloK/AirBnB_clone/blob/main/assets/console.png)
 
 ### Execution
 Your shell should work like this in interactive mode:
@@ -97,7 +97,7 @@ $
 
 ## Final Product
 
-![Image of hbnb](https://https://github.com/ThapeloK/AirBnB_clone/blob/master/Finalairbnb.png)
+![Image of hbnb](https://github.com/ThapeloK/AirBnB_clone/blob/main/assets/Finalairbnb.png)
 
 
 ******************************************************************************
@@ -105,4 +105,3 @@ $
 ## Authors
 * **Thapelo** - [ThapeloK](https://github.com/ThapeloK/)
 * **Lilian** - [Lilieyen](https://github.com/Lilieyen)
-
