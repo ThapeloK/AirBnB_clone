@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """test case for console file"""
 
-from console import HBNBCommand
-import unittest
-from models import storage
-import pep8
+import console
 import inspect
+import pep8
+import unittest
+HBNBCommand = console.HBNBCommand
 
 
 class TestConsoleDocs(unittest.TestCase):
