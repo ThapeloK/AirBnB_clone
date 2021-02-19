@@ -3,6 +3,7 @@
 
 import models
 import cmd
+import re
 import shlex
 from datetime import datetime
 from models.amenity import Amenity
@@ -12,6 +13,7 @@ from models.place import Place
 from models.user import User
 from models.review import Review
 from models.base_model import BaseModel
+from models import storage 
 
 
 class HBNBCommand(cmd.Cmd):
@@ -29,3 +31,6 @@ class HBNBCommand(cmd.Cmd):
     def do_EOF(self, arg):
         """exit program using EOF"""
         return True
+
+if __name__ == "__main__":
+    HBNBCommand().cmdloop()
