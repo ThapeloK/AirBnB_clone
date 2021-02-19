@@ -17,7 +17,6 @@ from models import storage
 from models.base_model import BaseModel
 
 
-
 class HBNBCommand(cmd.Cmd):
     """HBNB command interpretor"""
 
@@ -70,16 +69,14 @@ class HBNBCommand(cmd.Cmd):
 
     def do_quit(self, line):
         """Exit program using quit command"""
-        
         return True
 
     def do_EOF(self, line):
-        """Exit program using EOF"""   
+        """Exit program using EOF"""
         return True
 
     def do_create(self, line):
         """Creating a new class instance"""
-       
         if (self.my_errors(line, 1) == 1):
             return
         args = line.split(" ")
@@ -93,7 +90,6 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, line):
         """String rep of an instance based on class name and id"""
-
         if (self.my_errors(line, 2) == 1):
             return
         args = line.split()
@@ -105,7 +101,6 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, line):
         """Deletion of an instance based on class name and id"""
-      
         if (self.my_errors(line, 2) == 1):
             return
         args = line.split()
@@ -118,7 +113,6 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """String representation of all instances"""
-              
         d = storage.all()
         if not line:
             print([str(x) for x in d.values()])
@@ -130,7 +124,6 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """Update instances based on class name and id"""
-       
         if (self.my_errors(line, 4) == 1):
             return
         args = line.split()
@@ -204,6 +197,7 @@ class HBNBCommand(cmd.Cmd):
                 rest = params.groups()[1].split(", ")
                 commands[args[1]](args[0] + " " + params.groups()[0] + " " +
                                   rest[0] + " " + rest[1])
+
 
 if __name__ == '__main__':
     cli = HBNBCommand()
