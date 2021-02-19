@@ -1,9 +1,8 @@
 #!/usr/bin/python3
 """This contains the console"""
 
-import models
 import cmd
-import shlex
+import models
 from datetime import datetime
 from models.amenity import Amenity
 from models.city import City
