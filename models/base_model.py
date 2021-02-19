@@ -29,7 +29,7 @@ class BaseModel:
         """
         self.updated_at = datetime.today()
         models.storage.save()
-    
+
     def __str__(self):
         """Return the print/str representation of the BaseModel instance."""
         clname = self.__class__.__name__
