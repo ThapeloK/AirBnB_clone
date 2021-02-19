@@ -18,6 +18,7 @@ classes = {"Amenity": Amenity, "BaseModel": BaseModel, "City": City,
 
 class HBNBCommand(cmd.Cmd):
     """HBNB command interpretor"""
+    doc_header = "(Doc cmd)"
     prompt = "(hbnb) "
 
     def emptyline(self):
