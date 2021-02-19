@@ -14,7 +14,7 @@ class TestCity(unittest.TestCase):
 
     """Unit test for City Class"""
 
-    def test_basic_test(self):        
+    def test_basic_test(self):
         self.assertTrue(issubclass(City, BaseModel))
         my_model = City()
         my_model.name = "Holberton"
@@ -24,7 +24,6 @@ class TestCity(unittest.TestCase):
 
     def test_init(self):
         """Test if created_at, updated_at and id are exist"""
-        
         my_model = City()
         self.assertTrue(hasattr(my_model, "id"))
         self.assertTrue(hasattr(my_model, "created_at"))
@@ -34,7 +33,6 @@ class TestCity(unittest.TestCase):
 
     def test_init_time(self):
         """Test if created_at, updated_at are valid"""
-        
         then = datetime.utcnow()
         my_model = City()
         now = datetime.utcnow()
@@ -44,7 +42,6 @@ class TestCity(unittest.TestCase):
 
     def test_init_id(self):
         """Test if uuid is valid"""
-        
         my_model = City()
         my_model_1 = City()
         self.assertEqual(uuid.UUID(my_model.id).version, 4)
@@ -52,14 +49,12 @@ class TestCity(unittest.TestCase):
 
     def test_str_method(self):
         """Tests __str__ of City class"""
-        
         my_model = City()
         s = "[City] ({}) {}".format(my_model.id, my_model.__dict__)
         self.assertEqual(str(my_model), s)
 
     def test_save_method(self):
         """Tests save() method of BaseClass"""
-        
         then = datetime.utcnow()
         my_model = City()
         updated_at = my_model.updated_at
@@ -69,7 +64,6 @@ class TestCity(unittest.TestCase):
 
     def test_to_dict_method(self):
         """Tests to_dict() of City class and check types inside"""
-        
         my_model = City()
         my_model.my_number = 777
         d = dict(my_model.__dict__)
@@ -97,6 +91,7 @@ class TestCity(unittest.TestCase):
         """Test attibutes"""
         self.assertEqual(type(City.state_id), str)
         self.assertEqual(type(City.name), str)
+
 
 if __name__ == '__main__':
     unittest.main()

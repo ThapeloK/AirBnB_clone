@@ -16,7 +16,6 @@ class TestState(unittest.TestCase):
 
     def test_basic_test(self):
         """Basic tests for State class"""
-        
         self.assertTrue(issubclass(State, BaseModel))
         my_model = State()
         my_model.name = "Holberton"
@@ -26,7 +25,6 @@ class TestState(unittest.TestCase):
 
     def test_init(self):
         """Test if created_at, updated_at and id are exist"""
-        
         my_model = State()
         self.assertTrue(hasattr(my_model, "id"))
         self.assertTrue(hasattr(my_model, "created_at"))
@@ -35,7 +33,6 @@ class TestState(unittest.TestCase):
 
     def test_init_time(self):
         """Test if created_at, updated_at are valid"""
-        
         then = datetime.utcnow()
         my_model = State()
         now = datetime.utcnow()
@@ -45,7 +42,6 @@ class TestState(unittest.TestCase):
 
     def test_init_id(self):
         """Test if uuid is valid"""
-        
         my_model = State()
         my_model_1 = State()
         self.assertEqual(uuid.UUID(my_model.id).version, 4)
@@ -53,14 +49,12 @@ class TestState(unittest.TestCase):
 
     def test_str_method(self):
         """Tests __str__ of State class"""
-        
         my_model = State()
         s = "[State] ({}) {}".format(my_model.id, my_model.__dict__)
         self.assertEqual(str(my_model), s)
 
     def test_save_method(self):
         """Tests save() method of BaseClass"""
-        
         then = datetime.utcnow()
         my_model = State()
         updated_at = my_model.updated_at
@@ -70,7 +64,6 @@ class TestState(unittest.TestCase):
 
     def test_to_dict_method(self):
         """Tests to_dict() of State class and check types inside"""
-        
         my_model = State()
         my_model.my_number = 777
         d = dict(my_model.__dict__)

@@ -94,5 +94,6 @@ class TestUser_8(unittest.TestCase):
         self.assertEqual(type(User.first_name), str)
         self.assertEqual(type(User.last_name), str)
 
+
 if __name__ == "__main__":
     unittest.main()

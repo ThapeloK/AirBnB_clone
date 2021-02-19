@@ -16,7 +16,6 @@ class TestPlace(unittest.TestCase):
 
     def test_basic_test(self):
         """Basic tests for Place class"""
-        
         self.assertTrue(issubclass(Place, BaseModel))
         my_model = Place()
         my_model.name = "Holberton"
@@ -26,7 +25,6 @@ class TestPlace(unittest.TestCase):
 
     def test_init(self):
         """Test if created_at, updated_at and id are exist"""
-        
         my_model = Place()
         self.assertTrue(hasattr(my_model, "id"))
         self.assertTrue(hasattr(my_model, "created_at"))
@@ -47,7 +45,6 @@ class TestPlace(unittest.TestCase):
 
     def test_init_time(self):
         """Test if created_at, updated_at are valid"""
-        
         then = datetime.utcnow()
         my_model = Place()
         now = datetime.utcnow()
@@ -57,7 +54,6 @@ class TestPlace(unittest.TestCase):
 
     def test_init_id(self):
         """Test if uuid is valid"""
-        
         my_model = Place()
         my_model_1 = Place()
         self.assertEqual(uuid.UUID(my_model.id).version, 4)
@@ -65,14 +61,12 @@ class TestPlace(unittest.TestCase):
 
     def test_str_method(self):
         """Tests __str__ of Place class"""
-        
         my_model = Place()
         s = "[Place] ({}) {}".format(my_model.id, my_model.__dict__)
         self.assertEqual(str(my_model), s)
 
     def test_save_method(self):
         """Tests save() method of BaseClass"""
-        
         then = datetime.utcnow()
         my_model = Place()
         updated_at = my_model.updated_at
@@ -82,7 +76,6 @@ class TestPlace(unittest.TestCase):
 
     def test_to_dict_method(self):
         """Tests to_dict() of Place class and check types inside"""
-        
         my_model = Place()
         my_model.my_number = 777
         d = dict(my_model.__dict__)
@@ -134,6 +127,7 @@ class TestPlace(unittest.TestCase):
         self.assertEqual(type(Place.latitude), float)
         self.assertEqual(type(Place.longitude), float)
         self.assertEqual(type(Place.amenity_ids), list)
+
 
 if __name__ == '__main__':
     unittest.main()

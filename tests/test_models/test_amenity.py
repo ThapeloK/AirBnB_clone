@@ -89,5 +89,6 @@ class TestAmenity_8(unittest.TestCase):
         """Test attibutes"""
         self.assertEqual(type(Amenity.name), str)
 
+
 if __name__ == '__main__':
     unittest.main()
